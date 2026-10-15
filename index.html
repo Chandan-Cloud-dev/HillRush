@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hill Rush - Offroad Adventure</title>
+
+    <meta name="description"
+          content="Race across beautiful hills in Hill Rush, an exciting off-road bike racing game.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+
+        <header class="top-bar">
+            <div class="brand">
+                <span class="brand-icon">🏍️</span>
+                <div>
+                    <h1>HILL RUSH</h1>
+                    <p>OFFROAD ADVENTURE</p>
+                </div>
+            </div>
+
+            <button id="soundBtn" class="sound-button"
+                    aria-label="Toggle sound">
+                🔊
+            </button>
+        </header>
+
+        <main class="game-card">
+
+            <div class="hud">
+
+                <div class="hud-box">
+                    <span class="hud-label">DISTANCE</span>
+                    <strong><span id="distance">0</span> m</strong>
+                </div>
+
+                <div class="hud-box coin-box">
+                    <span class="hud-label">COINS</span>
+                    <strong>🟡 <span id="coins">0</span></strong>
+                </div>
+
+                <div class="hud-box">
+                    <span class="hud-label">SPEED</span>
+                    <strong><span id="speed">0</span> km/h</strong>
+                </div>
+
+            </div>
+
+            <div class="canvas-container">
+
+                <canvas id="gameCanvas"
+                        aria-label="Hill Rush bike racing game">
+                </canvas>
+
+                <div id="startScreen" class="overlay">
+
+                    <div class="start-panel">
+                        <div class="game-logo">🏁</div>
+
+                        <p class="eyebrow">THE HILLS ARE CALLING</p>
+
+                        <h2>HILL <span>RUSH</span></h2>
+
+                        <p class="description">
+                            Conquer the hills. Collect coins.
+                            Become an off-road legend.
+                        </p>
+
+                        <button id="startBtn" class="primary-button">
+                            START YOUR ENGINE →
+                        </button>
+
+                        <p class="small-text">
+                            W A S D / ARROW KEYS
+                        </p>
+                    </div>
+
+                </div>
+
+                <div id="gameOverScreen"
+                     class="overlay hidden">
+
+                    <div class="start-panel">
+
+                        <p class="eyebrow">RIDE COMPLETE</p>
+
+                        <h2>GAME <span>OVER</span></h2>
+
+                        <p class="description">
+                            Every great rider tries again.
+                        </p>
+
+                        <div class="result-stats">
+                            <div>
+                                <span>Distance</span>
+                                <strong id="finalDistance">0 m</strong>
+                            </div>
+
+                            <div>
+                                <span>Coins</span>
+                                <strong id="finalCoins">0</strong>
+                            </div>
+                        </div>
+
+                        <button id="restartBtn"
+                                class="primary-button">
+                            RIDE AGAIN ↻
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div id="pauseIndicator" class="pause-indicator hidden">
+                    PAUSED
+                </div>
+
+            </div>
+
+            <div class="bottom-panel">
+
+                <div class="fuel-section">
+                    <div class="fuel-heading">
+                        <span>⛽ FUEL</span>
+                        <span id="fuelPercent">100%</span>
+                    </div>
+
+                    <div class="fuel-track">
+                        <div id="fuelBar" class="fuel-fill"></div>
+                    </div>
+                </div>
+
+                <div class="control-hint">
+                    <span>⬅️ LEAN BACK</span>
+                    <span>ACCELERATE ➡️</span>
+                </div>
+
+            </div>
+
+        </main>
+
+        <section class="controls">
+
+            <button id="brakeBtn"
+                    class="control-button brake-button">
+                <span>◀</span>
+                <small>BRAKE / BACK</small>
+            </button>
+
+            <button id="pauseBtn"
+                    class="control-button pause-button">
+                <span>Ⅱ</span>
+                <small>PAUSE</small>
+            </button>
+
+            <button id="accelerateBtn"
+                    class="control-button accelerate-button">
+                <span>▶</span>
+                <small>ACCELERATE</small>
+            </button>
+
+        </section>
+
+        <footer>
+            <p>HILL RUSH © 2026 · BUILT FOR ADVENTURE</p>
+            <p>Explore every hill. Master every jump.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
